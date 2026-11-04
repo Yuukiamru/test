@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#351923">
+  <meta name="description" content="Lorem — artificial flowers and custom bouquets.">
+  <title>Lorem — Artificial Flower Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Lorem home">
+      <img src="assets/logo.svg" alt="" onerror="this.hidden=true">
+      <span>Lorem</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#shop">Shop</a>
+      <a class="nav-link" href="#builder">Custom Bouquet</a>
+      <a class="nav-link" href="#about">About Us</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" id="cartButton" type="button" aria-label="Open cart">
+      <span class="cart-icon">♧</span><span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section-screen" id="home" aria-labelledby="heroTitle">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow hero-eyebrow">ARTIFICIAL FLOWERS · MADE TO LAST</p>
+        <h1 id="heroTitle">Lorem</h1>
+        <p class="hero-tagline">FLOWERS THAT<br>KEEP THEIR<br>BEAUTY.</p>
+        <a class="text-link hero-link" href="#shop">Explore collection <span>↗</span></a>
+      </div>
+      <div class="hero-flower hero-lily" aria-hidden="true">
+        <img src="assets/flowers/lily.svg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="asset-fallback lily-fallback">✿</span>
+      </div>
+      <div class="hero-flower hero-tulip" aria-hidden="true">
+        <img src="assets/flowers/tulip.svg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="asset-fallback tulip-fallback">🌷</span>
+      </div>
+      <div class="hero-flower hero-purple" aria-hidden="true">
+        <img src="assets/flowers/purple.svg" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="asset-fallback purple-fallback">✿</span>
+      </div>
+      <div class="hero-bottom-note"><span>01 / 05</span><span>TIMELESS BLOOMS, THOUGHTFULLY ARRANGED</span></div>
+      <a class="scroll-cue" href="#shop" aria-label="Scroll to shop"><span></span>SCROLL</a>
+    </section>
+
+    <!-- SHOP -->
+    <section class="shop section-pad" id="shop" aria-labelledby="shopTitle">
+      <div class="section-heading shop-heading">
+        <p class="eyebrow">THE LOREM SELECTION</p>
+        <h2 id="shopTitle">Our <em>Collection</em></h2>
+        <p class="section-intro">Thoughtful floral pieces to make every corner feel a little more special.</p>
+      </div>
+
+      <div class="shop-feature">
+        <div class="shop-product-copy">
+          <span class="product-index">FEATURED PIECE / 001</span>
+          <p class="eyebrow">A FOREVER KIND OF FLOWER</p>
+          <h3>White Lily<br><em>Arrangement</em></h3>
+          <p class="product-description">An elegant arrangement of delicate lilies, made to bring a soft and lasting touch to your space.</p>
+          <div class="product-price">Rp200.000</div>
+          <button class="button button-dark" type="button" data-add-product="white-lily">Add to cart <span>↗</span></button>
+        </div>
+        <div class="chair-display">
+          <div class="display-orbit orbit-one"></div>
+          <div class="display-orbit orbit-two"></div>
+          <div class="chair-image-wrap">
+            <img class="chair-image" src="assets/products/chair.png" alt="Wooden chair display" onerror="this.style.display='none'">
+            <div class="chair-fallback" aria-hidden="true"><div class="chair-back"></div><div class="chair-seat"></div><div class="chair-leg leg-one"></div><div class="chair-leg leg-two"></div><div class="chair-leg leg-three"></div><div class="chair-leg leg-four"></div></div>
+            <img class="chair-bouquet" src="assets/products/white-lily-bouquet.png" alt="White lily bouquet" onerror="this.style.display='none'">
+            <span class="bouquet-fallback" aria-hidden="true">✿</span>
+          </div>
+          <span class="display-caption">A little beauty, every day.</span>
+        </div>
+        <div class="shop-side-note">01 — 03<br>CURATED FLOWERS</div>
+      </div>
+
+      <div class="product-strip" aria-label="Other products">
+        <article class="mini-product">
+          <div class="mini-product-art mini-art-rose">✿</div>
+          <div><h4>Blush Tulip</h4><p>Rp150.000</p></div>
+          <button type="button" class="mini-add" data-add-product="blush-tulip" aria-label="Add Blush Tulip to cart">+</button>
+        </article>
+        <article class="mini-product">
+          <div class="mini-product-art mini-art-purple">✿</div>
+          <div><h4>Lavender Bloom</h4><p>Rp175.000</p></div>
+          <button type="button" class="mini-add" data-add-product="lavender-bloom" aria-label="Add Lavender Bloom to cart">+</button>
+        </article>
+        <a class="all-products-link" href="#builder">Create something personal <span>↗</span></a>
+      </div>
+    </section>
+
+    <!-- BOUQUET BUILDER -->
+    <section class="builder section-pad" id="builder" aria-labelledby="builderTitle">
+      <div class="section-heading builder-heading">
+        <p class="eyebrow">A BOUQUET, YOUR WAY</p>
+        <h2 id="builderTitle">Build Your <em>Own Bouquet.</em></h2>
+        <p class="section-intro">Choose your favourite blooms and make an arrangement that feels like you.</p>
+      </div>
+
+      <div class="builder-workspace">
+        <aside class="builder-categories" aria-label="Flower categories">
+          <p class="panel-label">01 / CATEGORY</p>
+          <button class="category-button selected" type="button" data-category="all">All flowers <span>06</span></button>
+          <button class="category-button" type="button" data-category="lily">Lilies <span>02</span></button>
+          <button class="category-button" type="button" data-category="tulip">Tulips <span>02</span></button>
+          <button class="category-button" type="button" data-category="filler">Fillers <span>02</span></button>
+          <div class="category-note"><span class="note-flower">✳</span><p>Mix different blooms to create your own signature bouquet.</p></div>
+        </aside>
+
+        <div class="bouquet-preview-panel">
+          <div class="preview-topline"><span class="panel-label">02 / YOUR ARRANGEMENT</span><span class="live-label"><i></i> LIVE PREVIEW</span></div>
+          <div class="bouquet-canvas" id="bouquetCanvas" aria-label="Your bouquet preview">
+            <div class="preview-halo"></div>
+            <div class="preview-stems" id="previewStems" aria-hidden="true"></div>
+            <div class="preview-blooms" id="previewBlooms" aria-live="polite">
+              <div class="empty-preview"><span>✿</span><p>Your bouquet starts here</p><small>Select flowers to add them</small></div>
+            </div>
+            <div class="preview-wrap" id="previewWrap"><span></span><span></span><span></span></div>
+          </div>
+          <div class="preview-footer"><span id="flowerCount">0 flowers selected</span><button class="reset-button" id="resetBouquet" type="button">Reset arrangement ↺</button></div>
+        </div>
+
+        <aside class="builder-options">
+          <div class="options-heading"><p class="panel-label">03 / CHOOSE BLOOMS</p><span id="availableCount">06 ITEMS</span></div>
+          <div class="flower-options" id="flowerOptions">
+            <button class="flower-option" type="button" data-flower="lily-white"><span class="flower-thumb thumb-lily">✿</span><span class="flower-info"><strong>White Lily</strong><small>Rp35.000 / stem</small></span><span class="option-plus">+</span></button>
+            <button class="flower-option" type="button" data-flower="lily-pink"><span class="flower-thumb thumb-pink-lily">✿</span><span class="flower-info"><strong>Pink Lily</strong><small>Rp35.000 / stem</small></span><span class="option-plus">+</span></button>
+            <button class="flower-option" type="button" data-flower="tulip-pink"><span class="flower-thumb thumb-tulip">🌷</span><span class="flower-info"><strong>Pink Tulip</strong><small>Rp25.000 / stem</small></span><span class="option-plus">+</span></button>
+            <button class="flower-option" type="button" data-flower="tulip-white"><span class="flower-thumb thumb-white-tulip">🌷</span><span class="flower-info"><strong>White Tulip</strong><small>Rp25.000 / stem</small></span><span class="option-plus">+</span></button>
+            <button class="flower-option" type="button" data-flower="lavender"><span class="flower-thumb thumb-lavender">✿</span><span class="flower-info"><strong>Lavender</strong><small>Rp15.000 / stem</small></span><span class="option-plus">+</span></button>
+            <button class="flower-option" type="button" data-flower="baby-breath"><span class="flower-thumb thumb-baby">✳</span><span class="flower-info"><strong>Baby's Breath</strong><small>Rp12.000 / stem</small></span><span class="option-plus">+</span></button>
+          </div>
+          <div class="wrapping-select">
+            <label for="wrapping">Wrapping paper</label>
+            <select id="wrapping">
+              <option value="0">No wrapping — Rp0</option>
+              <option value="15000">Ivory paper — Rp15.000</option>
+              <option value="20000">Dusty rose paper — Rp20.000</option>
+              <option value="25000">Burgundy paper — Rp25.000</option>
+            </select>
+          </div>
+        </aside>
+      </div>
+
+      <div class="builder-checkout">
+        <div class="checkout-summary"><span class="panel-label">YOUR CREATION</span><strong id="builderSummary">Your bouquet is waiting</strong></div>
+        <div class="checkout-total"><span>Total estimated price</span><strong id="builderTotal">Rp0</strong></div>
+        <button class="button button-light" id="addBouquet" type="button" disabled>Add bouquet to cart <span>↗</span></button>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section-pad" id="about">
+      <div class="about-mark">L.</div>
+      <div class="about-copy">
+        <p class="eyebrow">THE STORY BEHIND LOREM</p>
+        <h2>Beauty that<br><em>stays.</em></h2>
+        <p>We believe flowers should be part of the little moments, not only the special ones. Lorem creates thoughtful artificial floral pieces that keep their charm, season after season.</p>
+        <a class="text-link" href="#contact">Get to know us <span>↗</span></a>
+      </div>
+      <div class="about-flower" aria-hidden="true">✿</div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <footer class="contact section-pad" id="contact">
+      <div class="footer-main">
+        <div><p class="eyebrow">LET'S MAKE SOMETHING BEAUTIFUL</p><h2>Say <em>hello.</em></h2></div>
+        <a class="footer-email" href="mailto:hello@loremflowers.com">hello@loremflowers.com <span>↗</span></a>
+      </div>
+      <div class="footer-bottom"><a class="footer-brand" href="#home">Lorem.</a><span>Artificial flowers, made to last.</span><span>© <span id="year"></span> LOREM</span></div>
+    </footer>
+  </main>
+
+  <!-- CART DRAWER -->
+  <div class="cart-backdrop" id="cartBackdrop" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your Cart <span id="drawerCount">(0)</span></h2></div><button class="cart-close" id="closeCart" type="button" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="cart-empty">Your cart is empty for now.</p></div>
+    <div class="cart-footer"><div><span>Subtotal</span><strong id="cartSubtotal">Rp0</strong></div><button class="button button-dark checkout-button" id="checkoutButton" type="button" disabled>Continue to order <span>↗</span></button><small>Demo interface — checkout can be connected to WhatsApp or a payment service.</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
