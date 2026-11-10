@@ -1,0 +1,887 @@
+<!doctype html>
+
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+
+    <meta name="theme-color" content="#351923" />
+
+    <meta
+      name="description"
+      content="Lorem — artificial flowers and custom bouquets."
+    />
+
+    <title>Lorem — Artificial Flower Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#home" aria-label="Lorem home">
+        <img
+          src="assets/flowers/logo.svg"
+          alt=""
+          onerror="this.hidden = true"
+        />
+
+        <span>Lorem</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home">Home</a>
+
+        <a class="nav-link" href="#shop">Shop</a>
+
+        <a class="nav-link" href="#builder">Custom Bouquet</a>
+
+        <a class="nav-link" href="#about">About Us</a>
+
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <button
+        class="cart-button"
+        id="cartButton"
+        type="button"
+        aria-label="Open cart"
+      >
+        <img src="assets/icon.svg" alt="" class="cart-icon" />
+
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main>
+      <!-- HERO -->
+
+      <section
+        class="hero section-screen"
+        id="home"
+        aria-labelledby="heroTitle"
+      >
+        <div class="hero-grain" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow">ARTIFICIAL FLOWERS · MADE TO LAST</p>
+
+          <h1 id="heroTitle">Lorem</h1>
+
+          <p class="hero-tagline">
+            FLOWERS THAT<br />STAY BEAUTIFUL<br />FOREVER.
+          </p>
+
+          <a class="text-link hero-link" href="#shop"
+            >Explore the collection <span>↗</span></a
+          >
+        </div>
+
+        <div class="hero-flower hero-lily" aria-hidden="true">
+          <img
+            src="assets/flowers/lilly.svg"
+            alt=""
+            onerror="
+              this.style.display = 'none';
+
+              this.nextElementSibling.style.display = 'block';
+            "
+          />
+
+          <span class="asset-fallback lily-fallback">✿</span>
+        </div>
+
+        <div class="hero-flower hero-tulip" aria-hidden="true">
+          <img
+            src="assets/flowers/tulip.svg"
+            alt=""
+            onerror="
+              this.style.display = 'none';
+
+              this.nextElementSibling.style.display = 'block';
+            "
+          />
+
+          <span class="asset-fallback tulip-fallback">🌷</span>
+        </div>
+
+        <div class="hero-flower hero-purple" aria-hidden="true">
+          <img
+            src="assets/flowers/purple.svg"
+            alt=""
+            onerror="
+              this.style.display = 'none';
+
+              this.nextElementSibling.style.display = 'block';
+            "
+          />
+
+          <span class="asset-fallback purple-fallback">✿</span>
+        </div>
+
+        <div class="hero-bottom-note">
+          <span>01 / COLLECTION</span
+          ><span>TIMELESS BLOOMS, THOUGHTFULLY ARRANGED</span>
+        </div>
+
+        <a class="scroll-cue" href="#shop" aria-label="Scroll to shop"
+          ><span></span>SCROLL</a
+        >
+      </section>
+
+      <!-- SHOP -->
+
+      <section class="shop section-pad" id="shop" aria-labelledby="shopTitle">
+        <div class="section-heading shop-heading">
+          <p class="eyebrow">THE LOREM COLLECTION</p>
+
+          <h2 id="shopTitle">Our <em>Collection</em></h2>
+
+          <p class="section-intro">
+            Thoughtful floral pieces that bring warmth and beauty to every
+            corner.
+          </p>
+        </div>
+
+        <div class="shop-layout">
+          <div class="shop-list-column">
+            <div class="shop-tools" aria-label="Filter products">
+              <label class="shop-search-label" for="shopSearch">
+                <span class="sr-only">Search products</span>
+                <input id="shopSearch" type="search" placeholder="Search collection..." autocomplete="off" />
+              </label>
+              <label class="shop-sort-label" for="shopSort">
+                <span class="sr-only">Sort products</span>
+                <select id="shopSort">
+                  <option value="featured">Featured</option>
+                  <option value="price-asc">Price: low to high</option>
+                  <option value="price-desc">Price: high to low</option>
+                  <option value="name">Name: A–Z</option>
+                </select>
+              </label>
+            </div>
+            <p class="shop-results" id="shopResults" aria-live="polite">3 pieces in the collection</p>
+          <div
+            class="shop-product-list"
+            role="group"
+            aria-label="Choose a product"
+          >
+            <!-- UNTIL WE MEET AGAIN -->
+            <button
+              class="shop-product-card is-selected"
+              type="button"
+              data-shop-product="white-lily"
+              aria-pressed="true"
+            >
+              <img
+                class="shop-card-art"
+                src="assets/flowers/until-we-meet-again.svg"
+                alt=""
+                loading="lazy"
+              />
+
+              <span class="shop-card-info">
+                <strong>Until We Meet Again</strong>
+                <small>Rp340.000</small>
+              </span>
+
+              <span class="shop-card-check" aria-hidden="true">✓</span>
+            </button>
+
+            <!-- BLUSH TULIP -->
+            <button
+              class="shop-product-card"
+              type="button"
+              data-shop-product="blush-tulip"
+              aria-pressed="false"
+            >
+              <img
+                class="shop-card-art"
+                src="assets/flowers/blush-tulip.svg"
+                alt=""
+                loading="lazy"
+              />
+
+              <span class="shop-card-info">
+                <strong>Blush Tulip</strong>
+                <small>Rp150.000</small>
+              </span>
+
+              <span class="shop-card-check" aria-hidden="true">✓</span>
+            </button>
+
+            <!-- LAVENDER BLOOM -->
+            <button
+              class="shop-product-card"
+              type="button"
+              data-shop-product="lavender-bloom"
+              aria-pressed="false"
+            >
+              <img
+                class="shop-card-art"
+                src="assets/flowers/lavender-bloom.svg"
+                alt=""
+                loading="lazy"
+              />
+
+              <span class="shop-card-info">
+                <strong>Lavender Bloom</strong>
+                <small>Rp175.000</small>
+              </span>
+
+              <span class="shop-card-check" aria-hidden="true">✓</span>
+            </button>
+          </div>
+          </div>
+
+          <!-- PRODUCT PREVIEW -->
+
+          <div class="shop-product-stage">
+            <div class="shop-stage-copy">
+              <span class="product-index" id="shopProductIndex"
+                >FEATURED PIECE / 001</span
+              >
+              <p class="eyebrow">FLOWERS FOR FOREVER</p>
+              <h3 id="shopProductName">Until We Meet Again</h3>
+              <p class="product-description" id="shopProductDescription">
+                An elegant arrangement of delicate lilies designed to bring a
+                soft, lasting touch to your space.
+              </p>
+              <div class="product-price" id="shopProductPrice">Rp340.000</div>
+              <p class="product-meta" id="shopProductMeta">Made to order · Decorative artificial flowers</p>
+              <button
+                class="button button-dark"
+                type="button"
+                id="shopAddButton"
+                data-add-product="white-lily"
+              >
+                Add to Cart <span>↗</span>
+              </button>
+            </div>
+            <div class="chair-display">
+              <div class="display-orbit orbit-one"></div>
+              <div class="display-orbit orbit-two"></div>
+              <div class="chair-image-wrap">
+                <div class="chair-fallback" aria-hidden="true">
+                  <div class="chair-back"></div>
+                  <div class="chair-seat"></div>
+                  <div class="chair-leg leg-one"></div>
+                  <div class="chair-leg leg-two"></div>
+                  <div class="chair-leg leg-three"></div>
+                  <div class="chair-leg leg-four"></div>
+                </div>
+                <img
+                  class="chair-bouquet"
+                  id="shopChairBouquet"
+                  src="assets/flowers/lilly.svg"
+                  alt="White lily arrangement"
+                  onerror="this.style.display = 'none'"
+                />
+                <span class="bouquet-fallback" aria-hidden="true">✿</span>
+              </div>
+              <span class="display-caption">A little beauty, every day.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOUQUET BUILDER -->
+
+      <section
+        class="builder section-pad"
+        id="builder"
+        aria-labelledby="builderTitle"
+      >
+        <div class="section-heading builder-heading">
+          <p class="eyebrow">DESIGN YOUR OWN ARRANGEMENT</p>
+
+          <h2 id="builderTitle">Build Your <em>Own Bouquet.</em></h2>
+
+          <p class="section-intro">
+            Choose your favorite blooms and create an arrangement that feels
+            truly yours.
+          </p>
+        </div>
+
+        <div class="builder-workspace">
+          <aside class="builder-categories" aria-label="Flower categories">
+            <p class="panel-label">01 / CATEGORY</p>
+
+            <button
+              class="category-button selected"
+              type="button"
+              data-category="all"
+              aria-pressed="true"
+            >
+              All Flowers <span>23</span>
+            </button>
+
+            <button class="category-button" type="button" data-category="lily">
+              Lilies <span>02</span>
+            </button>
+
+            <button
+              class="category-button"
+              type="button"
+              data-category="tulip"
+              aria-pressed="false"
+            >
+              Tulips <span>02</span>
+            </button>
+
+            <button class="category-button" type="button" data-category="hydrangea" aria-pressed="false">
+              Hydrangeas <span>04</span>
+            </button>
+
+            <button class="category-button" type="button" data-category="gerbera" aria-pressed="false">
+              Gerberas <span>04</span>
+            </button>
+
+            <button class="category-button" type="button" data-category="carnation" aria-pressed="false">
+              Carnations <span>04</span>
+            </button>
+
+            <button class="category-button" type="button" data-category="filler" aria-pressed="false">
+              Fillers <span>07</span>
+            </button>
+
+            <div class="category-note">
+              <span class="note-flower">✳</span>
+
+              <p>
+                Blend different blooms to create your own signature bouquet.
+                Up to 12 stems per arrangement.
+              </p>
+            </div>
+          </aside>
+
+          <div class="bouquet-preview-panel">
+            <div class="preview-topline">
+              <span class="panel-label">02 / BOUQUET PREVIEW</span
+              ><span class="live-label"><i></i> LIVE PREVIEW</span>
+            </div>
+
+            <div
+              class="bouquet-canvas"
+              id="bouquetCanvas"
+              aria-label="Your bouquet preview"
+            >
+              <div class="preview-halo"></div>
+
+              <div class="preview-blooms" id="previewBlooms" aria-live="polite">
+                <div class="empty-preview">
+                  <span>✿</span>
+
+                  <p>Your bouquet starts here</p>
+
+                  <small>Select blooms to add them</small>
+                </div>
+              </div>
+
+              <div class="preview-wrap" id="previewWrap">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="bouquet-editor" id="bouquetEditor">
+              <div class="bouquet-mode-row">
+                <button class="arrange-mode-button is-active" id="autoArrange" type="button" aria-pressed="true">
+                  <span aria-hidden="true">✦</span> Auto Arrange
+                </button>
+                <span class="editor-hint" id="editorHint">Automatic layout is on</span>
+              </div>
+              <div class="flower-controls" id="flowerControls" aria-label="Selected flower controls">
+                <span class="control-selection" id="controlSelection">Select a flower in the preview</span>
+                <div class="control-actions">
+                  <button type="button" data-flower-control="rotate-left" disabled aria-label="Rotate selected flower left">↶</button>
+                  <button type="button" data-flower-control="rotate-right" disabled aria-label="Rotate selected flower right">↷</button>
+                  <span class="control-divider"></span>
+                  <button type="button" data-flower-control="smaller" disabled aria-label="Make selected flower smaller">−</button>
+                  <button type="button" data-flower-control="larger" disabled aria-label="Make selected flower larger">+</button>
+                  <span class="control-divider"></span>
+                  <button type="button" data-flower-control="reset-one" disabled aria-label="Reset selected flower">Reset</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="preview-footer">
+              <span id="flowerCount">0 flowers selected</span
+              ><button class="reset-button" id="resetBouquet" type="button">
+                Reset bouquet ↺
+              </button>
+            </div>
+          </div>
+
+          <aside class="builder-options">
+            <div class="options-heading">
+              <p class="panel-label">03 / FLOWER & WRAPPING</p>
+
+              <span id="availableCount">06 ITEMS</span>
+            </div>
+
+            <div
+              class="flower-options"
+              id="flowerOptions"
+              role="region"
+              aria-label="Scrollable flower options"
+              tabindex="0"
+              aria-live="polite"
+            ></div>
+
+            <div class="wrapping-select">
+              <label for="wrapping">Wrapping paper</label>
+
+              <select id="wrapping">
+                <option value="0">No wrapping — Rp0</option>
+
+                <option value="15000">Ivory paper — Rp15.000</option>
+
+                <option value="20000">Dusty rose paper — Rp20.000</option>
+
+                <option value="25000">Burgundy paper — Rp25.000</option>
+              </select>
+            </div>
+          </aside>
+        </div>
+
+        <div class="builder-checkout">
+          <div class="checkout-summary">
+            <span class="panel-label">YOUR CREATION</span
+            ><strong id="builderSummary">Your bouquet is waiting</strong>
+            <small id="builderBreakdown">Choose flowers to see your price breakdown.</small>
+          </div>
+
+          <div class="checkout-total">
+            <span>Total estimated price</span
+            ><strong id="builderTotal">Rp0</strong>
+          </div>
+
+          <button
+            class="button button-light"
+            id="addBouquet"
+            type="button"
+            disabled
+          >
+            Add bouquet to cart <span>↗</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+
+      <section class="about section-pad" id="about">
+        <div class="about-mark">L.</div>
+
+        <div class="about-copy">
+          <p class="eyebrow">THE STORY BEHIND LOREM</p>
+
+          <h2>Beauty that<br /><em>stays.</em></h2>
+
+          <p>
+            We believe flowers should be part of the little moments, not only
+            the special ones. Lorem creates thoughtful artificial floral pieces
+            that keep their charm, season after season.
+          </p>
+
+          <a class="text-link" href="#contact">Get to know us <span>↗</span></a>
+        </div>
+
+        <div class="about-flower" aria-hidden="true">✿</div>
+      </section>
+
+      <!-- CONTACT / FOOTER -->
+
+      <footer class="contact section-pad" id="contact">
+        <div class="footer-main">
+          <div>
+            <p class="eyebrow">LET'S MAKE SOMETHING BEAUTIFUL</p>
+
+            <h2>Say <em>hello.</em></h2>
+          </div>
+
+          <a class="footer-email" href="mailto:hello@loremflowers.com"
+            >hello@loremflowers.com <span>↗</span></a
+          >
+        </div>
+
+        <div class="footer-bottom">
+          <a class="footer-brand" href="#home">Lorem.</a
+          ><span>Artificial flowers, made to last.</span
+          ><span>© <span id="year"></span> LOREM</span>
+        </div>
+      </footer>
+    </main>
+
+    <!-- CART DRAWER -->
+
+    <div class="cart-backdrop" id="cartBackdrop" hidden></div>
+
+    <aside
+      class="cart-drawer"
+      id="cartDrawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cartTitle"
+      aria-hidden="true"
+      inert
+    >
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">YOUR SELECTION</p>
+
+          <h2 id="cartTitle">Your Cart <span id="drawerCount">(0)</span></h2>
+        </div>
+
+        <button
+          class="cart-close"
+          id="closeCart"
+          type="button"
+          aria-label="Close cart"
+        >
+          ×
+        </button>
+      </div>
+
+      <div class="cart-items" id="cartItems">
+        <p class="cart-empty">Your cart is empty for now.</p>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-footer-top">
+          <span>Subtotal</span><strong id="cartSubtotal">Rp0</strong>
+        </div>
+        <button class="cart-clear" id="clearCart" type="button" disabled>Clear cart</button>
+
+        <button class="cart-history-link" id="openOrderHistory" type="button">View order history</button>
+        <button
+          class="button button-dark checkout-button"
+          id="checkoutButton"
+          type="button"
+          disabled
+        >
+          Continue to order <span>↗</span></button
+        ><small
+          >Demo interface — checkout can be connected to WhatsApp or a payment
+          service.</small
+        >
+      </div>
+    </aside>
+
+    <!-- GUEST CHECKOUT + ORDER CONFIRMATION -->
+    <dialog
+      class="checkout-dialog"
+      id="checkoutDialog"
+      aria-labelledby="checkoutTitle"
+    >
+      <div class="checkout-dialog-inner">
+        <header class="checkout-dialog-header">
+          <div>
+            <p class="eyebrow">THE FINAL STEP</p>
+            <h2 id="checkoutTitle">Complete your <em>order.</em></h2>
+            <p class="checkout-lead">
+              Checkout tanpa akun. Lengkapi alamat dan pilih metode pembayaran.
+            </p>
+          </div>
+          <button
+            class="cart-close"
+            id="closeCheckout"
+            type="button"
+            aria-label="Close checkout"
+          >
+            ×
+          </button>
+        </header>
+
+        <form id="checkoutForm">
+          <div class="checkout-grid" id="checkoutPanel">
+            <section class="checkout-section" aria-labelledby="shippingHeading">
+              <p class="panel-label" id="shippingHeading">
+                01 / SHIPPING ADDRESS
+              </p>
+              <div class="checkout-fields">
+                <label
+                  >Nama penerima
+                  <input
+                    id="customerName"
+                    name="customerName"
+                    type="text"
+                    autocomplete="name"
+                    maxlength="80"
+                    required
+                    placeholder="Nama lengkap penerima"
+                  />
+                </label>
+                <label
+                  >Nomor WhatsApp
+                  <input
+                    id="customerPhone"
+                    name="customerPhone"
+                    type="tel"
+                    inputmode="tel"
+                    autocomplete="tel"
+                    pattern="[0-9]{8,15}"
+                    maxlength="20"
+                    required
+                    placeholder="08xxxxxxxxxx"
+                  />
+                </label>
+                <label
+                  >Provinsi
+                  <input
+                    name="province"
+                    type="text"
+                    autocomplete="address-level1"
+                    maxlength="80"
+                    required
+                    placeholder="Provinsi"
+                  />
+                </label>
+                <label
+                  >Kota / Kabupaten
+                  <input
+                    name="city"
+                    type="text"
+                    autocomplete="address-level2"
+                    maxlength="80"
+                    required
+                    placeholder="Kota atau kabupaten"
+                  />
+                </label>
+                <label
+                  >Kecamatan
+                  <input
+                    name="district"
+                    type="text"
+                    maxlength="80"
+                    required
+                    placeholder="Kecamatan"
+                  />
+                </label>
+                <label
+                  >Kode pos
+                  <input
+                    name="postalCode"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]{5}"
+                    maxlength="5"
+                    required
+                    placeholder="5 digit kode pos"
+                  />
+                </label>
+                <label class="field-full"
+                  >Alamat lengkap
+                  <textarea
+                    name="address"
+                    rows="3"
+                    maxlength="350"
+                    autocomplete="street-address"
+                    required
+                    placeholder="Nama jalan, nomor rumah, RT/RW, kelurahan"
+                  ></textarea>
+                </label>
+                <label class="field-full"
+                  >Catatan untuk kurir <span>(opsional)</span>
+                  <textarea
+                    name="deliveryNotes"
+                    rows="2"
+                    maxlength="250"
+                    placeholder="Patokan rumah atau instruksi pengiriman"
+                  ></textarea>
+                </label>
+              </div>
+            </section>
+
+            <section class="checkout-section" aria-labelledby="paymentHeading">
+              <p class="panel-label" id="paymentHeading">
+                02 / DELIVERY & PAYMENT
+              </p>
+              <label class="checkout-label" for="checkoutShipping"
+                >Zona pengiriman <span>(tarif simulasi)</span></label
+              >
+              <select id="checkoutShipping" name="shipping" required>
+                <option value="12000">Zona dekat — Rp12.000</option>
+                <option value="20000">Zona menengah — Rp20.000</option>
+                <option value="30000">Zona jauh — Rp30.000</option>
+              </select>
+              <p class="shipping-helper">Pilih zona sebagai estimasi demo. Tarif belum dihitung otomatis dari alamat.</p>
+
+              <p class="checkout-label payment-title">Metode pembayaran</p>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    value="Bank Transfer"
+                    required
+                  />
+                  <span class="payment-symbol" aria-hidden="true">▤</span>
+                  <span
+                    ><strong>Bank Transfer</strong
+                    ><small>Konfirmasi transfer secara manual</small></span
+                  >
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="QRIS" />
+                  <span class="payment-symbol" aria-hidden="true">▦</span>
+                  <span
+                    ><strong>QRIS</strong
+                    ><small>Simulasi pilihan pembayaran QR</small></span
+                  >
+                </label>
+                <label class="payment-option">
+                  <input
+                    type="radio"
+                    name="paymentMethod"
+                    value="Cash on Delivery (COD)"
+                  />
+                  <span class="payment-symbol" aria-hidden="true">₨</span>
+                  <span
+                    ><strong>Cash on Delivery</strong
+                    ><small>Bayar saat pesanan diterima (simulasi)</small></span
+                  >
+                </label>
+              </div>
+
+              <div
+                class="checkout-order-items"
+                id="checkoutItems"
+                aria-label="Items in this order"
+              ></div>
+              <div class="checkout-price-summary">
+                <div>
+                  <span>Subtotal produk</span
+                  ><strong id="checkoutSubtotal">Rp0</strong>
+                </div>
+                <div>
+                  <span>Ongkos kirim</span
+                  ><strong id="checkoutShippingCost">Rp12.000</strong>
+                </div>
+                <div class="checkout-grand-total">
+                  <span>Total pembayaran</span
+                  ><strong id="checkoutGrandTotal">Rp0</strong>
+                </div>
+              </div>
+              <p class="checkout-disclaimer">
+                Demo akademik: belum ada transaksi pembayaran, verifikasi
+                transfer, atau tarif kurir sungguhan.
+              </p>
+              <button class="button button-dark checkout-submit" type="submit">
+                Place order <span>↗</span>
+              </button>
+            </section>
+          </div>
+        </form>
+
+        <section
+          class="order-success"
+          id="orderSuccess"
+          hidden
+          aria-labelledby="successTitle"
+        >
+          <div class="success-mark" aria-hidden="true">✓</div>
+          <p class="eyebrow">ORDER RECEIVED</p>
+          <h3 id="successTitle">Your order is <em>in our hands.</em></h3>
+          <p>
+            Terima kasih, <strong id="successOrderName"></strong>. Pesanan demo
+            lu sudah dicatat.
+          </p>
+          <div class="order-reference">
+            <span>ORDER NUMBER</span><strong id="successOrderNumber"></strong>
+          </div>
+          <div class="success-order-items" id="successOrderItems"></div>
+          <div class="success-meta">
+            <div>
+              <span>Payment method</span><strong id="successPayment"></strong>
+            </div>
+            <div>
+              <span>Shipping cost</span
+              ><strong id="successShippingCost">Rp0</strong>
+            </div>
+            <div>
+              <span>Total</span><strong id="successOrderTotal"></strong>
+            </div>
+            <div class="success-address">
+              <span>Delivery address</span
+              ><strong id="successDeliveryAddress"></strong>
+            </div>
+          </div>
+          <p class="panel-label tracking-heading">03 / ORDER DELIVERY STATUS</p>
+          <div class="tracking-timeline" id="trackingTimeline"></div>
+          <p class="checkout-disclaimer">
+            Status pengiriman bisa digerakkan untuk demo. Ini bukan pelacakan
+            kurir langsung.
+          </p>
+          <p
+            class="checkout-disclaimer"
+            id="whatsappFeedback"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <div class="success-actions">
+            <button
+              class="button button-dark"
+              id="sendWhatsAppOrder"
+              type="button"
+            >
+              Send order via WhatsApp <span>↗</span>
+            </button>
+            <button
+              class="button button-outline"
+              id="advanceOrderStatus"
+              type="button"
+            >
+              Demo: advance status
+            </button>
+            <button
+              class="button button-quiet"
+              id="closeCheckoutSuccess"
+              type="button"
+            >
+              Close
+            </button>
+          </div>
+        </section>
+      </div>
+    </dialog>
+
+    <dialog class="history-dialog" id="orderHistoryDialog" aria-labelledby="historyTitle">
+      <div class="history-dialog-inner">
+        <header class="history-dialog-header">
+          <div><p class="eyebrow">YOUR PREVIOUS CHECKOUTS</p><h2 id="historyTitle">Order <em>history.</em></h2></div>
+          <button class="cart-close" id="closeOrderHistory" type="button" aria-label="Close order history">×</button>
+        </header>
+        <p class="history-note">Riwayat tersimpan di browser ini saja. Pesanan tidak tersinkron ke perangkat lain.</p>
+        <div class="history-list" id="orderHistoryList" aria-live="polite"></div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
